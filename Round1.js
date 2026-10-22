@@ -14,36 +14,11 @@ console.log(isleap(2024))
 console.log(isleap(2025))
 console.log(isleap(2019))
 //2. get BMI category
-//if height <= 0
-// return invalid message
-//calculate BMI as weight/height^2%
 
-
-
-// 1. isLeapYear
-/*
-Plan:
-- Check if the year is divisible by 400; if so, return true.
-- Check if the year is divisible by 100; if so, return false.
-- Check if the year is divisible by 4; if so, return true.
-- Otherwise, return false.
-*/
-function isLeapYear(year) {
-  if (year % 400 === 0) return true;
-  if (year % 100 === 0) return false;
-  return year % 4 === 0;
-}
-console.log(isLeapYear(2024)); // true
-console.log(isLeapYear(1900)); // false
-console.log(isLeapYear(-4));   // edge case: true (proleptic Gregorian)
-
-// 2. getBMICategory
-/*
-Plan:
-- Check if height <= 0 and return an invalid message if true.
-- Calculate BMI by dividing weight by (height * height).
-- Compare BMI against standard thresholds (< 18.5, < 25, < 30).
-- Return the corresponding category string based on the checks.
+/* Check if height <= 0 and return an invalid message if true.
+// Calculate BMI by dividing weight by (height * height).
+// Compare BMI against standard thresholds (< 18.5, < 25, < 30).
+// Return the corresponding category string based on the checks.
 */
 function getBMICategory(weightKg, heightM) {
   if (heightM <= 0) return "Invalid height";
